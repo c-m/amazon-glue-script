@@ -27,7 +27,7 @@ def init_connection():
 
 def add_name_tag(conn):
 
-    # get the local instance_id and userdata
+    # get the local instance_id and userdata using boto.utils
     metadata = boto.utils.get_instance_metadata()
     instance_id = metadata['instance-id']
     userdata = boto.utils.get_instance_userdata()
